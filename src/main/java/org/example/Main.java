@@ -18,64 +18,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.nio.file.Path;
 
-
-import static java.lang.Math.random;
-
-//public class Main {
-//    public static void main(String[] args) throws IOException {
-//        ArrayList<String>links = new ArrayList<>();
-//        String url = "https://skillbox.ru/";
-//        Document doc = Jsoup.connect(url).get();
-//        Elements images = doc.select("img");
-//        for (Element image : images) {
-//            links.add(image.attr("abs:src"));
-//        }
-//        for(String link : links){
-//            String extension = link
-//                    .replaceAll("^.+\\.", "")
-//                    .replace("?.+$", "");
-//        }
-//        int number = 1 + (int) (Math.random() * (100 - 1 + 1));
-//        String extension = ".img";
-//        String filePath = "data/" + number++ + "." + extension;
-//        download(url, "D:/test");
-//
-//    }
-//    public static void download(String url, String filePath) throws IOException {
-//        URL imageURL = new URL(url);
-//        HttpURLConnection connection = (HttpURLConnection) imageURL.openConnection();
-//        connection.setRequestMethod("GET");
-//        connection.connect();
-//
-//        if (connection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-//            InputStream inputStream = connection.getInputStream();
-//
-//            Files.copy(inputStream, Paths.get(filePath));
-//
-//            inputStream.close();
-//            connection.disconnect();
-//        } else {
-//            throw new IOException("Не удалось скачать изображение: " + connection.getResponseCode());
-//        }
-//    }
-//
-//}
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class Main {
     public static void main(String[] args) {
         try {
